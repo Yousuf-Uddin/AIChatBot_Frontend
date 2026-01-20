@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/AIChatBot_Frontend/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+
+    <script src="https://raw.githubusercontent.com/Yousuf-Uddin/test1/main/chatbot-widget.umd.cjs"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.ChatbotWidget && window.ChatbotWidget.init) {
+          window.ChatbotWidget.init({
+            position: "bottom-right",
+          });
+        } else {
+          console.error("ChatbotWidget is not loaded.");
+        }
+      });
+    </script>
+    <script type="module" crossorigin src="/AIChatBot_Frontend/assets/index-BdPDoddV.js"></script>
+    <link rel="stylesheet" crossorigin href="/AIChatBot_Frontend/assets/index-C0LT2yE6.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
