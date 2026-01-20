@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       {/* <h1 className="text-4xl font-bold text-black">AI-Chatbot</h1> */}
-      <ChatbotWidget position="bottom-right" />
+      {/* <ChatbotWidget position="bottom-right" /> */}
     </>
   );
 }

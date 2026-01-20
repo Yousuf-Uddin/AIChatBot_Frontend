@@ -18,10 +18,12 @@ const ChatbotWidget = ({ position = "bottom-right" }) => {
   const [botTyping, setBotTyping] = useState(false);
   const initialized = useRef(false);
 
+  const url = "https://chatbot-backend-el10.onrender.com/";
+
   useEffect(() => {
     if (!initialized.current) {
       axios
-        .get("http://localhost:5000/")
+        .get(url)
         .then((res) => {
           console.log(res.data);
           setMessages((prev) => [
@@ -51,7 +53,7 @@ const ChatbotWidget = ({ position = "bottom-right" }) => {
 
     // Send user message to backend and show bot response using axios
     axios
-      .post("http://localhost:5000/chat", {
+      .post(`${url}/chat`, {
         message: newMessage.text,
       })
       .then((res) => {
